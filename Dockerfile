@@ -1,2 +1,2 @@
-FROM alpine:latest
-RUN apk update; apk add bash ansible py-pip; pip3 install --upgrade pip; pip3 install ansible-lint
+FROM debian:stretch
+RUN apt-get -y update; apt-get -y install python-pip curl; pip install ansible==2.3.0.0 ansible-lint==3.4.13
